@@ -1,12 +1,13 @@
 body {
-    border: 1px solid black;
     color: white;
+    background-color:  black;
 }
+
 header {
     background-color: rgb(29, 0, 176);
     border: 1px solid white;
     padding: 10px;
-
+   
 }
 
 .hero {
@@ -31,7 +32,6 @@ footer {
     background-color: gray;
     border: 1px solid white;
     padding: 10px;
-
 }
 
 
@@ -39,50 +39,22 @@ footer {
 
 @media only screen 
 and (min-device-width: 375px) 
-and (max-device-height: 667px)  {
-    .content, .sidebar, .hero, header, footer {
-        background-color: black;
-
+and (max-device-width: 667px)  {
+    .content, .sidebar, .hero, header, footer{
+        display: flex;
+        flex-direction: column;
     }
-    .sticky {
-        position: sticky;
-    }
-
-   }
+}
 
    /* Medida para tablet "Ipad" */
 
 @media only screen 
-  and (min-device-width: 709px) 
-  and (max-device-width: 1024px)  {
-
-    .hero {
-        display: flex;
-    }
-
-    .sticky {
-        position: sticky;
-    }
-
-    .content {
-        display: flex;
-    }
-
-    .sidebar {
-        float: right;
-    }
-
-    
-    body {  background-color: aliceblue;
+and (min-device-width: 668px) 
+and (max-device-width: 1200px)  {
+    .flex-container {
         display: flex;
         flex-direction: row;
-        align-self: center;
-        width: 300px;
-        border: 1px;
-        border-bottom-style: inset;
-        border-color: rgb(197, 197, 197);
-        align-items: center;
-        
+        width: 100%;
     
     }
 }
@@ -90,22 +62,12 @@ and (max-device-height: 667px)  {
 /* Medida para portatil */
 
 @media screen 
-  and (min-device-width: 1200px) 
-  and (max-device-width: 1600px)  { 
-    .sticky {
-        position: sticky;
-    }
-
-    .content {
-        float: left;
-        margin-left: 15%;
-        margin-right: 15%;
-    }
-
-    .sidebar {
-        float: right;
-        margin-left: 15%;
-        margin-right: 15%;
+and (min-device-width: 1200px) 
+and (max-device-width: 1600px)  {
+    .flex-container {
+        display: flex;
+        width: 75%;
+        padding-left: 10%;
     }
 
 }
