@@ -1,0 +1,111 @@
+body {
+    border: 1px solid black;
+    color: white;
+}
+header {
+    background-color: rgb(29, 0, 176);
+    border: 1px solid white;
+    padding: 10px;
+
+}
+
+.hero {
+background-color: red;
+border: 1px solid white;
+padding: 10px;
+}
+
+.content {
+background-color: green;
+border: 1px solid white;
+padding: 10px;
+}
+
+.sidebar {
+    background-color: purple;
+    border: 1px solid white;
+    padding: 10px;
+}
+
+footer {
+    background-color: gray;
+    border: 1px solid white;
+    padding: 10px;
+
+}
+
+
+/* Medida para telefono "iphone" */
+
+@media only screen 
+and (min-device-width: 375px) 
+and (max-device-height: 667px)  {
+    .content, .sidebar, .hero, header, footer {
+        background-color: black;
+
+    }
+    .sticky {
+        position: sticky;
+    }
+
+   }
+
+   /* Medida para tablet "Ipad" */
+
+@media only screen 
+  and (min-device-width: 709px) 
+  and (max-device-width: 1024px)  {
+
+    .hero {
+        display: flex;
+    }
+
+    .sticky {
+        position: sticky;
+    }
+
+    .content {
+        display: flex;
+    }
+
+    .sidebar {
+        float: right;
+    }
+
+    
+    body {  background-color: aliceblue;
+        display: flex;
+        flex-direction: row;
+        align-self: center;
+        width: 300px;
+        border: 1px;
+        border-bottom-style: inset;
+        border-color: rgb(197, 197, 197);
+        align-items: center;
+        
+    
+    }
+}
+
+/* Medida para portatil */
+
+@media screen 
+  and (min-device-width: 1200px) 
+  and (max-device-width: 1600px)  { 
+    .sticky {
+        position: sticky;
+    }
+
+    .content {
+        float: left;
+        margin-left: 15%;
+        margin-right: 15%;
+    }
+
+    .sidebar {
+        float: right;
+        margin-left: 15%;
+        margin-right: 15%;
+    }
+
+}
